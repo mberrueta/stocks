@@ -1,0 +1,55 @@
+AllCops:
+  Include:
+    - '**/Guardfile'
+    - '**/Rakefile'
+    - '**/config.ru'
+    - app/views/**/*.rabl
+    - lib/**/*
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+    - features/support/env.rb
+    - features/support/mocks.rb
+    - lib/tasks/ci.rake
+    - lib/tasks/cucumber.rake
+    - lib/tasks/test_data.rake
+    - script/**/*
+    - spec/*_helper.rb
+    - lib/**/*.md
+  TargetRubyVersion: 2.3
+
+Rails:
+  Enabled: true
+
+AbcSize:
+  Enabled: false
+
+ClassLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+LambdaCall:
+  Enabled: false
+
+MethodLength:
+  Max: 15
+
+RaiseArgs:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Performance:
+  Size:
+    Enabled: true
+    CorrectUsingToA: false
