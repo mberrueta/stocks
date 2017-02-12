@@ -1,0 +1,55 @@
+default: &default
+  symbols:
+  - 'AGRO.BA'
+  - 'ALUA.BA'
+  - 'APBR.BA'
+  - 'AUSO.BA'
+  - 'BHIP.BA'
+  - 'BMA.BA'
+  - 'BOLT.BA'
+  - 'BPAT.BA'
+  - 'CAPU.BA'
+  - 'CARC.BA'
+  - 'CECO2.BA'
+  - 'CEL.BA'
+  - 'CELU.BA'
+  - 'COME.BA'
+  - 'CRES.BA'
+  - 'CTIO.BA'
+  - 'EDN.BA'
+  - 'ERAR.BA'
+  - 'FRAN.BA'
+  - 'GGAL.BA'
+  - 'INDU.BA'
+  - 'IRSA.BA'
+  - 'JMIN.BA'
+  - 'LEDE.BA'
+  - 'METR.BA'
+  - 'MIRG.BA'
+  - 'MOLI.BA'
+  - 'PAMP.BA'
+  - 'PESA.BA'
+  - 'PETR.BA'
+  - 'PSUR.BA'
+  - 'SAMI.BA'
+  - 'TECO2.BA'
+  - 'TGNO4.BA'
+  - 'TGSU2.BA'
+  - 'TRAN.BA'
+  - 'TS.BA'
+  - 'YPFD.BA'
+
+production:
+  <<: *default
+
+staging:
+  <<: *default
+
+development: &development
+  <<: *default
+
+test: &test
+  <<: *development
+
+cucumber:
+  <<: *test
