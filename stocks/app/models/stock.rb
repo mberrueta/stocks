@@ -11,8 +11,9 @@ class Stock < ApplicationRecord
     @last_trade ||= Trade.by_stock_id(id).last_one.first || Trade.new
   end
 
-  def self.create_form_yahoo
-    Yahoo::Finance.new.get_quotes(StocksApi.symbols).each do |data|
+  def self.create_form_yahoo(symbols)
+    result = []
+    Yahoo::Finance.new.get_quotes(symbols).each do |data|
       stock = Stock.new name: data.name, symbol: data.symbol
       next unless stock.valid?
       stock.fundamental = Fundamental.new avg_volumen: data.average_daily_volume,
@@ -25,7 +26,9 @@ class Stock < ApplicationRecord
                                           dividend_yield: data.dividend_yield,
                                           ask: data.ask, bid: data.bid
       stock.save! if stock.valid?
+      result << stock if stock.valid?
     end
+    result
   end
 
   private

@@ -9,16 +9,19 @@ var myApp = angular.module('myApp', ['ngRoute']);
 //   }]);
 
 myApp.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'views/view1.html', controller: 'View1Ctrl'});
-  $routeProvider.when('/view2', {templateUrl: 'views/view2.html', controller: 'View2Ctrl'});
+  $routeProvider.when('/', {templateUrl: 'views/stock_list.html', controller: 'stock_listCtrl'});
+  $routeProvider.when('/stock', {templateUrl: 'views/stock.html', controller: 'stockCtrl'});
 }]);
 
-myApp.controller('View1Ctrl', ['$scope', function($scope) {
-  $scope.greeting = 'Hola!';
+myApp.controller('stock_listCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/stocks').then(function(r){
+    $scope.symbols = r.data;
+  });
+
 }]);
 
 
-myApp.controller('View2Ctrl', ['$scope', function($scope) {
+myApp.controller('stockCtrl', ['$scope', function($scope) {
   $scope.greeting = 'Hola!';
 }]);
 

@@ -1,0 +1,37 @@
+<input type="text" ng-model="search" class="search-query" id="projects_search" placeholder="Search">
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> name </th>
+            <th> symbol </th>
+            <th> tags </th>
+            <th> category </th>
+            <th> favorite </th>
+            <th> blacklist </th>
+            <th> ranking </th>
+            <th> rava_symbol </th>
+            <th> google_symbol </th>
+            <th> investing_symbol </th>
+            <th> <a href="#/new"><i class="glyphicon glyphicon-plus"></i></a>  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="s in symbols | filter:search | orderBy:'name'">
+            <td>{{s.name}}</td>
+            <td> {{ s.symbol }}  </td>
+            <td> {{ s.tags }}  </td>
+            <td> {{ s.category }}  </td>
+            <td> {{ s.favorite }}  </td>
+            <td> {{ s.blacklist }}  </td>
+            <td> {{ s.ranking }}  </td>
+            <td> {{ s.rava_symbol }}  </td>
+            <td> {{ s.google_symbol }}  </td>
+            <td> {{ s.investing_symbol }}  </td>
+            <td>
+                <a href="#/new"><i class="glyphicon glyphicon-pencil"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
