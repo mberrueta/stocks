@@ -29,7 +29,7 @@
             <td> {{ s.google_symbol }}  </td>
             <td> {{ s.investing_symbol }}  </td>
             <td>
-                <a href="#/new"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a ng-href="#/stock/{{s.symbol | urlEncode}}"><i class="glyphicon glyphicon-pencil"></i></a>
             </td>
         </tr>
     </tbody>

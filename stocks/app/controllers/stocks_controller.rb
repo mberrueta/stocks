@@ -46,9 +46,8 @@ class StocksController < ApplicationController
   end
 
   def load
-    @stock = Stock.by_symbol(symbol)
+    @stock = Stock.by_symbol(symbol).first || Stock.find(params[:stock_id])
   end
-
 end
 
 #   def stock_quote

@@ -1,116 +1,79 @@
-{{ greeting }}
-
-
 <form class="form-horizontal">
-<fieldset>
+    <fieldset>
+        <legend>Form Name</legend>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="symbol">symbol</label>
+            <div class="col-md-4">
+                <input id="symbol" name="symbol" type="text" class="form-control input-md" ng-model="stock.symbol">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="name">name</label>
+            <div class="col-md-4">
+                <input id="name" name="name" type="text" class="form-control input-md" ng-model="stock.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="favorite">favorite</label>
+            <div class="col-md-4">
+                <input id="favorite" name="favorite" type="text" class="form-control input-md" ng-model="stock.favorite">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="blacklist">blacklist</label>
+            <div class="col-md-4">
+                <input id="blacklist" name="blacklist" type="text" class="form-control input-md" ng-model="stock.blacklist">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="tags">tags</label>
+            <div class="col-md-4">
+                <input id="tags" name="tags" type="text" class="form-control input-md" ng-model="stock.tags">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="category">category</label>
+            <div class="col-md-4">
+                <input id="category" name="category" type="text" class="form-control input-md" ng-model="stock.category">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ranking">ranking</label>
+            <div class="col-md-4">
+                <input id="ranking" name="ranking" type="number" class="form-control input-md" ng-model="stock.ranking">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="notes">notes</label>
+            <div class="col-md-4">
+                <input id="notes" name="notes" type="textarea" class="form-control input-md" ng-model="stock.notes">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">description</label>
+            <div class="col-md-4">
+                <input id="description" name="description" type="textarea" class="form-control input-md" ng-model="stock.description">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="rava_symbol">rava_symbol</label>
+            <div class="col-md-4">
+                <input id="rava_symbol" name="rava_symbol" type="text" class="form-control input-md" ng-model="stock.rava_symbol">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="google_symbol">google_symbol</label>
+            <div class="col-md-4">
+                <input id="google_symbol" name="google_symbol" type="text" class="form-control input-md" ng-model="stock.google_symbol">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="investing_symbol">investing_symbol</label>
+            <div class="col-md-4">
+                <input id="investing_symbol" name="investing_symbol" type="text" class="form-control input-md" ng-model="stock.investing_symbol">
+            </div>
+        </div>
 
-<!-- Form Name -->
-<legend>Form Name</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="radios">Inline Radios</label>
-  <div class="col-md-4">
-    <label class="radio-inline" for="radios-0">
-      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-      1
-    </label>
-    <label class="radio-inline" for="radios-1">
-      <input type="radio" name="radios" id="radios-1" value="2">
-      2
-    </label>
-    <label class="radio-inline" for="radios-2">
-      <input type="radio" name="radios" id="radios-2" value="3">
-      3
-    </label>
-    <label class="radio-inline" for="radios-3">
-      <input type="radio" name="radios" id="radios-3" value="4">
-      4
-    </label>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textarea">Text Area</label>
-  <div class="col-md-4">
-    <textarea class="form-control" id="textarea" name="textarea">default text</textarea>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>
-  </div>
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
-  </div>
-</div>
-
-<!-- Button (Double) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="button1id">Double Button</label>
-  <div class="col-md-8">
-    <button id="button1id" name="button1id" class="btn btn-success">Good Button</button>
-    <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button>
-  </div>
-</div>
-
-</fieldset>
+        <button class="btn" ng-click="update(stock)">save</button>
+    </fieldset>
 </form>
